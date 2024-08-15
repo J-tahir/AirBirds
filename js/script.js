@@ -65,3 +65,4 @@ function TshowSlides(n) {
   tSlides[tSlideIndex-1].style.display = "block";  
   dots[tSlideIndex-1].className += " tactive";
 }
+

@@ -5,6 +5,7 @@
     --secondary-color:#870524;
     --brown-color:#590813;
     --dark-brown-color:#320409;
+    --light-pink:#b3003f;
 
 }
 *{
@@ -313,7 +314,7 @@ header{
     text-align: center;
     color: rgb(57, 57, 57);
     padding: 2rem 4rem;
-
+    margin-bottom: 2rem;
 }
 .ws2-container-upper h2{
     text-align: center;
@@ -352,7 +353,7 @@ header{
 
 
 .ws2-container-lower{
-    background-color: var(--primary-color);
+    background-color: var(--light-pink);
     color: white;
     text-align: center;
     padding: 0rem 2rem;
@@ -383,8 +384,9 @@ header{
 /* ------ Services ------- */
 
 #services{
-    background-color: #f3f3f3;
-    padding: 2rem 0rem;
+    padding: 1rem;
+    padding-bottom: 5rem;
+
 }
 
 #services h2{
@@ -396,65 +398,61 @@ header{
     color: var(--brown-color);
 }
 .ser-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 1fr;
-    justify-items: center;
-    gap: 1rem;
-    width: 95%;
-    margin: 4rem auto ;
+    width: 60%;
+    margin: auto;
+}
+.ser-tab{
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 5px;
+}
+.ser-tab label{
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    cursor: pointer;
+    color:white;
+    background-color: var(--light-pink);
+    border-radius: 5px 5px 0px 0px;
+    font-weight: 600;
+}
+
+.ser-container label + input[type="checkbox"]{
+    display: none;
+}
+
+.ser-container .ser-tab-content{
+    background-color: rgb(204, 203, 203);
+    padding: 0rem 1rem;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all 1s;
+}
+.ser-container label+input[type="checkbox"]:checked +.ser-tab-content{
+    height:auto;
+    padding: 2rem;
+    opacity: 1;
+}
+.ser-tab-content ul{
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+}
+.ser-tab-content ul li{
+    line-height: 2;
+}
+
+.ser-action-btn{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+
+    text-decoration: none;
 
 }
-.card {
-    background-color: white;
-    box-shadow: 0 10px 20px rgba(212, 109, 109, 0.151) ;
-    border-radius: 8px;
-    color:black;
-    overflow: hidden;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    cursor: pointer;
-    border: 1px solid var(--primary-color);
-  }
-  
-  .card-content {
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: start;
-    text-align: center;
-    height: 100%;
-  }
-  .card-content img{
-    width:100%;
-    margin-bottom: 1rem;
-    object-fit:contain;
-  }
-
-  .card-content .card-title {
-    font-size: 1rem;
-    font-weight: 700;
-    color: inherit;
-    text-transform: uppercase;
-  }
-  
-  .card-content .card-para {
-    color: inherit;
-    opacity: 0.8;
-    font-size: 14px;
-  }
-  
-  .card:hover {
-    transform: rotateY(10deg) rotateX(10deg) scale(1.03);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
 
 /* -----Owner centric------ */
 
