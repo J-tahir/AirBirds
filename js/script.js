@@ -1,3 +1,13 @@
+
+// const menu = document.getElementById("header-menu");
+
+// document.onclick = function(e){
+//     if(e.target.id !== "header-menu" &&e.target.id !== "check" ) {
+//       menu.style.right="-100%"
+//     }
+//   }
+
+
 let slideIndex = 0;
 showSlides();
 

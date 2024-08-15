@@ -243,7 +243,7 @@ header{
 #whyus{
     
     background-color: #f3f3f3;
-    padding: 2rem 0rem; 
+    padding-top: 2rem; 
 }
 
 #whyus-heading{
@@ -307,6 +307,77 @@ header{
     margin-top: 1rem;
     font-weight: 200;
 }
+
+
+/* ------- Why us 2 ------- */
+
+.ws2-container-upper {
+    text-align: center;
+    color: rgb(57, 57, 57);
+    padding: 4rem;
+
+}
+.ws2-container-upper h2{
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+.ws2-container-upper p{
+    margin: 1rem;
+}
+.ws2-table{
+    text-align: left;
+    margin-top: 2rem;
+}
+.ws2-table ,tr ,td,th{
+    border: 1px solid rgba(136, 135, 135, 0.2);
+    border-collapse: collapse;
+    padding: 2rem;
+}
+.ws2-table th:nth-child(2){
+    font-size: 1.5rem;
+}
+.ws2-table td:nth-child(2) , th:nth-child(2){
+    background-color: #f7dfdf;
+    
+}
+.ws2-table td{
+    width: 33%;
+}
+
+.ws2-container-upper img{
+    width: 10%;
+}
+
+
+.ws2-container-lower{
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+.lower-container{
+    width: 90%;
+    margin: auto;
+}
+.ws2-lower-heading{
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+.ws2-container-lower p{
+    padding-bottom: 2rem;
+}
+.ws2-numbers{
+    display: inline-block;
+    padding: 2rem;
+}
+.ws2-numbers h2{
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+
+
 /* ------ Services ------- */
 
 #services{
@@ -774,10 +845,9 @@ footer{
     }
     .open-menu{
         color: white;
-        border: 2px solid var(--primary-color);
         background-color: var(--primary-color);
         border-radius: 5px;
-        padding: 0.5rem 0.8rem;
+        padding: 6px 12px;
     }
     #check:checked ~ #header-menu{right: 0;}
     
@@ -844,7 +914,44 @@ footer{
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         text-align: center;
     }
+
+    .ws2-container-upper{
+        padding: 1rem;
+    }
+
+    .ws2-container-upper h2{
+        font-size: 1.5rem;
+    }
+    .ws2-container-upper p{
+        font-size: 0.8rem;
+    }
+    .ws2-table td, th{
+        font-size: 0.6rem;
+    }
+    .ws2-table th:nth-child(2){
+        font-size: 0.6rem;
+    }
+
+    .ws2-table ,tr ,td,th{
+        border: 1px solid rgba(136, 135, 135, 0.2);
+        border-collapse: collapse;
+        padding:1rem;
+    }
+    .ws2-container-lower{
+        padding: 1rem;
+    }
+
     
+    .lower-container{
+        width: 70%;
+    
+    }
+    .ws2-numbers{
+        padding: 1rem;
+    }
+    .ws2-numbers h2{
+        font-size: 2rem;
+    }
     
     .ser-container{
         padding: 0rem 2rem;
@@ -861,6 +968,7 @@ footer{
     }
     #owner-centric h2{
         text-align: center;
+        font-size: 2rem;
     }
     
     .testimonials-container{
