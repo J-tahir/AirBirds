@@ -36,6 +36,10 @@ html{
     scroll-behavior: smooth;
     scroll-padding: 7rem;
 }
+body{
+    overflow-x: hidden;
+  overflow-x: clip !important;
+}
 
 header{
     background-color: white;
