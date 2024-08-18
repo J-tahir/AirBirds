@@ -952,6 +952,12 @@ footer{
         margin: 0;
         width: 100%;
     }
+    
+    .r-slider-track {
+        animation: scroll 20s linear infinite;
+        display: flex;
+        width: calc(300px * 5);
+    }
     .r-slide{
         width: 300px;
     }
