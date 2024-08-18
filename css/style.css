@@ -957,6 +957,7 @@ footer{
     }
     .r-slide:hover {
         width: 200px;
+        margin-bottom: 1rem;
     }
 
    
@@ -976,14 +977,10 @@ footer{
     
     #whyus-heading{
         font-size: 2rem;
+        padding: 0rem 1rem;
     }
     .ws-container{
         grid-template-columns: 1fr;
-    }
-
-    .ws-band{
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        text-align: center;
     }
 
     .ws2-container-upper{
