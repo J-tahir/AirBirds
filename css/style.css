@@ -176,6 +176,8 @@ header{
 
 .mySlides h2{
     font-size: 2rem;
+    font-weight: 900;
+    color: var(--light-pink);
 }
 .mySlides-text p{
     font-size: 1.3rem;
@@ -204,11 +206,11 @@ header{
 
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes fade {
-  from {opacity: 0.9} 
+  from {opacity: 0.8} 
   to {opacity: 1}
 }
 
@@ -257,6 +259,16 @@ header{
     width: 400px;
     margin-right: 1rem;
 }
+.r-slide:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    transition: all 1.5s;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 400px;
+    margin-right: 1rem;
+    transform: scale(1.1);
+}
 
 .r-slide p{
     font-size: 1rem;
@@ -273,7 +285,6 @@ header{
 }
 .r-user-profile img{
     width: 4rem;
-    mix-blend-mode:saturation;
 }
 .r-slide .r-location{
     font-size: 0.6rem;
@@ -365,7 +376,6 @@ header{
 
 .ws2-container-upper {
     text-align: center;
-    color: rgb(57, 57, 57);
     padding: 2rem 4rem;
     margin-bottom: 2rem;
 }
@@ -373,14 +383,15 @@ header{
     text-align: center;
     margin-top: 3rem;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
-    font-weight: 500;
-    color: var(--brown-color);
+    font-weight: 900;
+    color: var(--light-pink);
 }
 .ws2-container-upper p{
+    margin-bottom: 3rem;
     margin: 1rem;
 }
 .ws2-table{
+    color: rgb(57, 57, 57);
     text-align: left;
     margin-top: 2rem;
 }
@@ -416,7 +427,7 @@ header{
     margin: auto;
 }
 .ws2-lower-heading{
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 2rem;
 }
 .ws2-container-lower p{
@@ -438,25 +449,25 @@ header{
 
 #services{
     padding: 1rem;
-    padding-bottom: 5rem;
-
+    
 }
 
 #services h2{
     text-align: center;
     margin-top: 3rem;
-    font-size: 2.5rem;
     margin-bottom: 3rem;
-    font-weight: 500;
-    color: var(--brown-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--light-pink);
 }
 .ser-container{
-    width: 60%;
-    margin: auto;
+    width: 100%;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(90, 90, 90, 0.3);
 }
 .ser-tab{
-    width: 100%;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
+    width: 50%;
     background: #fff;
     border-radius: 5px;
 }
@@ -478,7 +489,7 @@ header{
 }
 
 .ser-container .ser-tab-content{
-    background-color: rgb(204, 203, 203);
+    background-color: rgb(231, 227, 227);
     padding: 0rem 1rem;
     overflow: hidden;
     height: 0;
@@ -499,10 +510,9 @@ header{
 }
 
 .ser-action-btn{
-    background-color: var(--primary-color);
+    background-color: var(--light-pink);
     color: white;
     padding: 1rem;
-
     text-decoration: none;
 
 }
@@ -511,58 +521,48 @@ header{
 
 #owner-centric{
     width: 100%;
-    background-image: url("/assets/slide2.jpg");
-    background-position: 0%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 3rem;
 }
 
-#owner-centric::before{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(10, 10, 10, 0.671);
-
-}
 #owner-centric h2{
-    padding: 3rem;
-    font-size: 3rem;
-    color:white;
-    font-weight: 300;
-    position: relative;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--light-pink);
 }
 
 .oc-container{
+    background-image: url("/assets/oc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
     position: relative;
-    width: 60%;
-    color: white;
-    padding: 0rem 3rem;
-    padding-bottom: 2rem;
+    width: 100%;
     height: fit-content;
+    padding: 1rem;
 
+}
+.oc-item{
+    background-color: #b3003f31;
+    position: relative;
+    padding: 1rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: white;
+    width: 60%;
+    margin: 2rem;
 }
 
 .oc-item h3{
     margin-top: 1rem;
 }
-.oc-item{
-    line-height: 1.5;
-    z-index: 1000;
-    font-size: 1rem;
-    text-align: justify;
-}
 
 #oc-btn{
     display: block;
     padding: 1rem;
-    border: 1px solid white;
     color: white;
+    border: 1px solid white;
     cursor: pointer;
     background-color: transparent;
     transition: all 0.5s;
@@ -582,10 +582,11 @@ header{
 }
 #testimonials h2{
     text-align: center;
-    font-size: 2.5rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
-    font-weight: 500;
-    color: var(--brown-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--light-pink);
 }
 .testimonials-container{
     max-width: 80%;
@@ -884,7 +885,7 @@ footer{
     .nav-items{
         color: white;
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .nav-items::after{
         background-color: white;
@@ -954,6 +955,9 @@ footer{
     .r-slide{
         width: 300px;
     }
+    .r-slide:hover {
+        width: 200px;
+    }
 
    
     .ws-items, .ws-items:nth-of-type(odd){
@@ -1020,33 +1024,43 @@ footer{
         font-size: 2rem;
     }
     
-    .ser-container{
-        padding: 0rem 2rem;
-    }
+    
      #services h2{
         font-size: 2rem;
         padding: 0rem 1rem;
      }
     
+     .ser-tab{
+        width: 100%;
+        padding: 0;
+     }
      #owner-centric{
-        padding: 1rem;
+        padding: 0rem;
      }
     .oc-container{
         width: 100%;
-        margin: auto;
-        padding: 0;
-        height: auto;
     }
     #owner-centric h2{
         text-align: center;
         font-size: 1.5rem;
-        padding: 2rem 0rem;
+        margin-top: 1rem;
     }
     .oc-container h3{
         font-size: 1rem;
     }
     .oc-container p{
         font-size: 0.8rem;
+    }
+    .oc-container{
+        background-position: 40%;
+        background-attachment: fixed;
+        margin: 0rem;
+        width: 100%;
+        padding: 0;
+    }
+    .oc-item{
+        margin: 0;
+        width: 100%;
     }
     
     .testimonials-container{
