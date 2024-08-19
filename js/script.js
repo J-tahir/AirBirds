@@ -24,16 +24,35 @@ function showSlides() {
   setTimeout(showSlides, 6000);
 }
 
+
+const model = document.getElementById("booking-window");
+
+function showDialog(){
+  document.getElementById("airbirds-body").classList.add("hide");
+  model.show();
+}
+
+function hideDialog(){
+  document.getElementById("airbirds-body").classList.remove("hide");
+  model.close();
+}
+
+
+
 function oclearnmore() {
   var moreText = document.getElementById("oc-more");
   var btnText = document.getElementById("oc-btn");
+  var briefText = document.getElementById("oc-brief");
 
   if(moreText.style.display !== "none") {
     moreText.style.display = "none";
     btnText.innerHTML = "Learn More";
+    briefText.style.display = "block";
+
   } else{
     moreText.style.display = "inline";
     btnText.innerHTML = "Back";
+    briefText.style.display="none";
   }
 }
 
@@ -66,3 +85,46 @@ function TshowSlides(n) {
   dots[tSlideIndex-1].className += " tactive";
 }
 
+
+const form = document.getElementById("fc-form");
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.style.display = "block";
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = json.message;
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 2000);
+        });
+
+
+
+});
