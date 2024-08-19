@@ -728,11 +728,108 @@ header{
     transform: scale(1.5);
 }
 
-
+/* ---- Contact us ----- */
   
+#contactus{
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 4rem;
+}
+#contactus h2{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--light-pink);
+}
+.cu-container{
+    display: flex;
+    justify-self:center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cu-map{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+.cu-form-container{
+    box-shadow: #c27a86 0px 1px 2px 0px, #ad6571 0px 1px 3px 1px;
+    padding: 2rem;
+    padding-bottom: 0rem;
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+}
+.cu-form-container h3{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.cu-form-container p{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.cu-form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+} 
+.cu-form-container form .cu-inputs{
+    padding: 1rem;
+    width: 100%;
+    margin: 0rem 1rem;
+    outline: none;
+}
+.cu-form-container form textarea{
+    padding: 1rem;
+    width: 100%;
+    margin: 0rem 1rem;
+    resize: none;
+    height: 8rem;
+}
+#cu-name-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+.cu-name{
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 
+.cu-inputs[type='button']{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    font-weight: 800;
+}
+.cu-inputs[type='button']:hover{
+    background-color: #ae0e29ce;
+}
 
+.cu-form-container form p{
+    font-size: 0.8rem;
+
+}
 
 
 
@@ -959,6 +1056,20 @@ footer{
     }
     #check:checked ~ #header-menu{right: 0;}
     
+    #booking-window{
+        margin: 0rem;
+        width: 95%;
+        border-radius: 0px;
+        margin: 0rem 0.5rem;
+    }
+    #booking-window button{
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    #booking-window iframe{
+        padding: 0rem;
+    }
+
     .slideshow-container{
         margin: 1rem;
         height: 40%;
@@ -1112,7 +1223,19 @@ footer{
         margin: 0;
         width: 100%;
     }
-    
+    #contactus{
+        padding: 1rem 0rem;
+    }
+    .cu-container{
+        flex-direction: column-reverse;
+    }
+    .cu-map{
+        width: 95%;
+    }
+    .cu-form-container{
+        width: 100%;
+        box-shadow: none;
+    }
     .testimonials-container{
         max-width: 100%;
         position: relative;
