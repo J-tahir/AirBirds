@@ -8,6 +8,19 @@
 //   }
 
 
+var myVar;
+
+function showLoader() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("site-content").style.display = "block";
+}
+
+
+
 let slideIndex = 0;
 showSlides();
 
