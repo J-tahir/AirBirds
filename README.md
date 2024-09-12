@@ -17,13 +17,13 @@ This website aims to showcase our services and provide a platform for clients to
 
 <h2>Features</h2>
 
-<strong>Responsive Design:</strong>
+<strong>Responsive Design:</strong><br>
 The website is fully responsive and optimized for various devices, including desktops, tablets, and mobile phones.<br>
-<strong>Interactive UI: </strong>
+<strong>Interactive UI: </strong><br>
 Developed with vanilla JavaScript for dynamic and interactive user experiences.<br>
-<strong>Modern Styling: </strong>
+<strong>Modern Styling: </strong><br>
 The website is styled using modern CSS practices for a clean and elegant look.<br>
-<strong>Cross-Browser Compatibility: </strong>
+<strong>Cross-Browser Compatibility: </strong><br>
 Ensured compatibility with major browsers like Chrome, Firefox, and Edge.
 
 <h2>Technologies Used</h2>
