@@ -45,9 +45,6 @@ cd airbirds
 ```
 Open ```index.html``` in your preferred browser.
 
-<h2>Contributing</h2>
-Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
-
 <h2>License</h2>
 This project is proprietary and not available for public use, distribution, or modification without explicit permission from the project owners.
 
