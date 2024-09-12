@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --primary-color:#AE0E28;
+    --secondary-color:#870524;
+    --brown-color:#590813;
+    --light-pink:#b3003f;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:  "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color:transparent;
+
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #555;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color)
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 7rem;
+}
+body{
+    overflow-x: hidden;
+    overflow-x: clip !important;
+}
+header{
+    background-color: #fffcfc;
+    width: 100%;
+    padding:0.5rem 3rem;
+    box-shadow: 0px 10px 10px -15px #111; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+#headerLogo{
+    width: 75px;
+    height: 82px;
+}
+.top-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+.top-section .heading{
+    flex: 1;
+}
+.top-section h2{
+    font-size: 3.5rem;
+}
+.top-section .imgs{
+    flex: 1;
+}
+.top-section p:nth-child(2){
+    font-style: italic;
+}
+#house-img{
+    filter: grayscale(80%);
+    width: 100%;
+    height: auto;
+}
+.top-section .imgs{
+    position: relative;
+}
+#user-pic{
+    filter: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+.case-study{
+    width: 70%;
+    margin: auto;
+    padding: 2rem;
+}
+#clientName{
+    margin-top: 2em;
+
+}
+.case-study strong{
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    font-style: normal;
+}
+.case-study p:nth-child(3){
+    font-style: italic;
+}
+.case-study p , li{
+    padding-bottom: 1rem;
+    line-height: 2;
+}
+.case-study ul, ol{
+    padding: 2rem;
+}
+.case-study li strong{
+    display: inline;
+    font-size: 1rem;
+}
+.banner{
+    width: 100%;
+    background-color: #AE0E28;
+    color: white;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    gap: 1rem;
+}
+.banner span:nth-child(1){
+    flex: 1;
+}
+.banner h2{
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.banner p{
+    margin: 0;
+    line-height: 1.5;
+}
+
+#action-btn{
+    display: block;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: #AE0E28;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.catch-line{
+    overflow: hidden;
+    position: relative;
+    margin: 2rem;
+    padding: 2rem;
+}
+.case-study em{
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.case-study #invertedCommas{
+    width: 56px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: drop-shadow(0px 100px 0 #ae0e292f);
+    transform: translateY(-75px) translateX(20px) rotate(10deg);
+  
+}
+.result ul{
+    padding-top: 0rem;
+}
+
+
+@media screen and (max-width:1100px) {
+
+    .top-section {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    #user-pic{
+        width: 32px;
+        height: 32px;
+    }
+    .top-section h2{
+        font-size: 25px;
+    }
+    #clientName{
+        font-size: 12px;
+    }
+    .case-study{
+        width: 100%;
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+    .case-study strong{
+        font-size: 1rem;
+    }
+    .case-study ul, ol{
+        padding: 1rem;
+    }
+    
+    .case-study li strong{
+        font-size: 0.8rem;
+    }
+    .banner{
+        flex-direction: column;
+        margin-top: 0rem;
+        padding: 2rem 1rem;
+    }
+    #action-btn{
+        margin-top: 1rem;
+    }
+    .catch-line{
+        margin: 2rem 0rem;
+        padding: 0rem 1rem;
+    }
+    .catch-line em{
+        font-size: 1.5rem;
+    }
+    .case-study #invertedCommas{
+        transform: translateY(-90px) translateX(20px) rotate(10deg);
+    }
+
+}

@@ -1,57 +1,34 @@
+//review slider
+const rprev = document.getElementById("r-prev");
+const rnext = document.getElementById("r-next");
+const rTrack = document.getElementById("r-slider");
+const rslides = document.getElementsByClassName("r-slide");
+let slidenumber = 1;
+let length = rslides.length;
+console.log(slidenumber)
 
-// const menu = document.getElementById("header-menu");
-
-// document.onclick = function(e){
-//     if(e.target.id !== "header-menu" &&e.target.id !== "check" ) {
-//       menu.style.right="-100%"
-//     }
-//   }
-
-
-var myVar;
-
-function showLoader() {
-  myVar = setTimeout(showPage, 1000);
+const nextSlide = ()=>{
+  rTrack.style.transform = `translateX(-${slidenumber*600}px)`;
+  slidenumber++;
 }
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("site-content").style.display = "block";
+const prevSlide = ()=>{
+  rTrack.style.transform = `translateX(-${(slidenumber-2)*600}px)`;
+  slidenumber--;
 }
 
+rnext.addEventListener('click', ()=>{
+  if(slidenumber < length-1)
+    nextSlide();
+})
 
+rprev.addEventListener('click', ()=>{
+  if(slidenumber>1)
+    prevSlide();
+  })
+  
 
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block"; 
-  slides[slideIndex-1].style.opacity = "1";
-  setTimeout(showSlides, 6000);
-}
-
-
-const model = document.getElementById("booking-window");
-
-function showDialog(){
-  document.getElementById("airbirds-body").classList.add("hide");
-  model.show();
-}
-
-function hideDialog(){
-  document.getElementById("airbirds-body").classList.remove("hide");
-  model.close();
-}
-
-
-
+// Owner centeric section functionalities
 function oclearnmore() {
   var moreText = document.getElementById("oc-more");
   var btnText = document.getElementById("oc-btn");
@@ -68,18 +45,15 @@ function oclearnmore() {
     briefText.style.display="none";
   }
 }
-
+// Testimonial slides functionalities 
 var tSlideIndex = 1;
 TshowSlides(tSlideIndex);
-
 function plusSlides(n) {
   TshowSlides(tSlideIndex += n);
 }
-
 function currentSlide(n) {
   TshowSlides(tSlideIndex = n);
 }
-
 function TshowSlides(n) {
   let i;
   let tSlides = document.getElementsByClassName("testimonials-slides");
@@ -97,50 +71,8 @@ function TshowSlides(n) {
   tSlides[tSlideIndex-1].style.display = "block";  
   dots[tSlideIndex-1].className += " tactive";
 }
-
-
-const form = document.getElementById("fc-form");
-const result = document.getElementById('result');
-
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.style.display = "block";
-  result.innerHTML = "Please wait..."
-
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                result.innerHTML = json.message;
-            } else {
-                console.log(response);
-                result.innerHTML = json.message;
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-        })
-        .then(function() {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 2000);
-        });
-});
-
-
-function openCity(evt, cityName) {
+//Locations 
+function openLocation(evt, locationName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -150,7 +82,96 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(locationName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 
+
+
+
+// Contact section form submission
+const cuForm = document.getElementById('cu-form');
+const cuResult = document.getElementById('cu-result');
+cuForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  const formData = new FormData(cuForm);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  cuResult.style.display = "block";
+  cuResult.innerHTML = "Please wait..."
+fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+    })
+    .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+            cuResult.innerHTML = json.message;
+        } else {
+            cuResult.innerHTML = json.message;
+        }
+    })
+    .catch(error => {
+        cuResult.innerHTML = "Something went wrong!";
+    })
+    .then(function() {
+        cuForm.reset();
+        setTimeout(() => {
+            cuResult.style.display = "none";
+        }, 2000);
+    });
+});
+// footer contact form submission
+const fcForm = document.getElementById('fc-form');
+const fcResult = document.getElementById('fc-result');
+fcForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  const formData = new FormData(fcForm);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  fcResult.style.display = "block";
+  fcResult.innerHTML = "Please wait..."
+fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+    })
+    .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+            fcResult.innerHTML = json.message;
+        } else {
+            fcResult.innerHTML = json.message;
+        }
+    })
+    .catch(error => {
+        fcResult.innerHTML = "Something went wrong!";
+    })
+    .then(function() {
+        fcForm.reset();
+        setTimeout(() => {
+            fcResult.style.display = "none";
+        }, 2000);
+    });
+});
+// FAQs accordion
+const accordions = document.querySelectorAll(".faqs-accordion");
+const header = document.querySelectorAll(".faqs-accordion__header");
+for (let i = 0; i < header.length; i++) {
+  header[i].addEventListener("click", function() {
+      this.classList.toggle("faqs-active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+  });
+}
